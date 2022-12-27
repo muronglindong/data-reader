@@ -65,6 +65,7 @@ class display_window:
         figure_canvas = FigureCanvasTkAgg(fig, self.display_level)
         figure_widget = figure_canvas.get_tk_widget()
         figure_widget.config(highlightthickness = 2, highlightbackground = "white", cursor='cross')
+        
         # figure_widget.bind(sequence="<Button-1>", func=self.pressMouseEvent, add = '+')
         # figure_widget.bind(sequence="<B1-Motion>", func=self.moveMouseEvent, add='+')
         toolbar = NavigationToolbar2Tk(figure_canvas, self.display_level)

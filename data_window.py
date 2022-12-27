@@ -2,12 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 import os
-# import code
-# import hashlib
-# import queue
-# import sys
-# import threading
-# import traceback
+
 import tkinter as tk
 
 import read_csv as rc
@@ -56,8 +51,10 @@ class data_window:
         # self.data_list.pack()
         self.data_list.bind('<<ListboxSelect>>', self.listbox_click)
 
-        self.console_widget = ConsoleText(self, wrap=tk.WORD)
-        self.console_widget.place(x=10, y=600, width=580, height=190)
+        # self.console_widget = ConsoleText(self.top, wrap=tk.WORD)
+        # self.console_widget.place(x=10, y=600, width=580, height=190)
+        self.console_widget = Console(self.top, locals(), self.top.destroy)
+        self.console_widget.place(x=10, y=600, width=780, height=190)
         
     def listbox_click(self, event):
         try:
